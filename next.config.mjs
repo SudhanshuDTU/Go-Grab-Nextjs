@@ -16,6 +16,7 @@ const nextConfig = {
       //   pathname: '/**',
       // },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   turbopack: {
     rules: {
@@ -30,7 +31,10 @@ const nextConfig = {
       type: 'asset/resource',
     });
     return config;
-  }
+  },
+  compiler: {
+    removeConsole: true,
+  },
 };
 
 export default nextConfig;
