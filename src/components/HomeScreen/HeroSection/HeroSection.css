@@ -61,9 +61,13 @@
 }
 
 .buy-button {
-  background-color: #6BC115;
+  background-color: #4FA30D;
   color: white;
+  font-weight: 500;
   margin-top: 50px;
+}
+.buy-button:hover {
+  background-color: #3f850a;
 }
 
 .partner-button2 {
