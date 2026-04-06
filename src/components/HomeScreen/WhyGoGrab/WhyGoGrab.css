@@ -124,7 +124,7 @@
 .partner-button3 {
   display: block;
   margin-top: 50px;
-  background-color: #007bff;
+  background-color: #0a58ca;
   color: white;
   padding: 10px 30px;
   border: none;
@@ -135,7 +135,7 @@
 }
 
 .partner-button3:hover {
-  background-color: #0056b3;
+  background-color: #084298;
 }
 
 @media (max-width: 768px) {
