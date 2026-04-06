@@ -8,7 +8,7 @@
 //  can show star ratings / testimonials in rich results.
 // ─────────────────────────────────────────────────────────────
 
-import './CampusFeedback.module.css';
+import './CampusFeedback.css';
 
 // ── Testimonials data ──
 // Easy to add more — just push to this array.

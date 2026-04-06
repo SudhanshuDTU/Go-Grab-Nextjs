@@ -15,7 +15,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import './WhyGoGrab.module.css';
+import './WhyGoGrab.css';
 
 import image1      from '@/assets/why-gograb/8205e36b883d1b9904411974101d7b446fa4d725.png';
 import image2      from '@/assets/why-gograb/14c72926c0e5e6dce89e0b3bb6cc106fd17ddfb7.png';

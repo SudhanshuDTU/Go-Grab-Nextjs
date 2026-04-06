@@ -12,7 +12,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useState } from 'react';
-import './FAQSection.module.css';
+import './FAQSection.css';
 
 const INITIAL_COUNT = 3;
 
