@@ -126,7 +126,7 @@ export default async function BlogSection() {
       </div>
 
       {/* View all blogs */}
-      <Link href="/blog" className="view-more-button">
+      <Link href="/blog" className="view-more-button" aria-label="Read more about cashless vending machines in educational institutions">
         Read More
       </Link>
     </section>
