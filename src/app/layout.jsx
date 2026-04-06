@@ -7,7 +7,7 @@
 
 import Script from 'next/script';
 import ClientLayout from './ClientLayout';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import '@/styles/App.css';
 import '@/styles/index.css';
 
@@ -216,6 +216,7 @@ export default function RootLayout({ children }) {
 
         {/* ── Client layout handles navbar + modal + footer ── */}
         <ClientLayout>{children}</ClientLayout>
+        <SpeedInsights />
       </body>
     </html>
   );
