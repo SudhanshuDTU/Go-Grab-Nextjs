@@ -15,7 +15,7 @@ import { useState } from 'react';
 import { databases, APPWRITE_CONFIG } from '@/lib/appwriteConfig';
 import { ID } from 'appwrite';
 import emailjs from 'emailjs-com';
-import './support.css';
+import './support.module.css';
 
 const FAQS = [
   {

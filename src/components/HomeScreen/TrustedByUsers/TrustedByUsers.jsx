@@ -12,7 +12,7 @@
 //     as rich text under your search listing
 // ─────────────────────────────────────────────────────────────
 
-import './TrustedByUsers.css';
+import './TrustedByUsers.module.css';
 
 // ── Stats data — update numbers here only ──
 const STATS = [

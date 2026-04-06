@@ -8,7 +8,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Databases, Query, Client } from 'appwrite';
-import './BlogSection.css';
+import './BlogSection.module.css';
 
 // ── Collection IDs ──
 const DATABASE_ID   = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID;

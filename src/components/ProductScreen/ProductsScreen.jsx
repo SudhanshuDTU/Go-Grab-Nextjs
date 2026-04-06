@@ -14,7 +14,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import './ProductsScreen.css';
+import './ProductsScreen.module.css';
 
 import vendingIllustration from '@/assets/product-screen/1.png';
 import Image2              from '@/assets/product-screen/2.png';

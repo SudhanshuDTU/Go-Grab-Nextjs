@@ -11,7 +11,7 @@
 'use client';
 
 import Image from 'next/image';
-import './HeroSection.css';
+import './HeroSection.module.css';
 import heroImage from '@/assets/Hero_Section_Image.webp';
 
 const HeroSection = ({ openModal }) => {

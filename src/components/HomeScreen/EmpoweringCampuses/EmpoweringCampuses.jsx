@@ -14,7 +14,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import './EmpoweringCampuses.css';
+import './EmpoweringCampuses.module.css';
 
 import image1  from '@/assets/campuses/66e9b6cd7013609025eecccaec8e7f519a49a766.webp';
 import image2  from '@/assets/campuses/6d52f9781dc5fe13ebbe9ef30844161c81654125.webp';

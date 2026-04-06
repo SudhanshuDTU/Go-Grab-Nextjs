@@ -12,7 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import footerLogo from '@/assets/go_grab_footer.png';
 import mailLogo   from '@/assets/mail.png';
 import instagram  from '@/assets/instagram.png';
-import './Footer.css';
+import './Footer.module.css';
 
 const Footer = ({ openModal }) => {
   return (

@@ -13,7 +13,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import Image from 'next/image';
-import './HowItWorks.css';
+import './HowItWorks.module.css';
 
 import tapAndBrowseImage from '@/assets/tap-and-browse.png';
 import payCashlessImage  from '@/assets/pay-cashless.png';

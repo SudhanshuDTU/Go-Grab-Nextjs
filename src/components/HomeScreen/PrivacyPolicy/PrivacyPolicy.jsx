@@ -14,7 +14,7 @@
 //     SEO equity for your main pages
 // ─────────────────────────────────────────────────────────────
 
-import './PrivacyPolicy.css';
+import './PrivacyPolicy.module.css';
 
 export default function PrivacyPolicy() {
   return (
