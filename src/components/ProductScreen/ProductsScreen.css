@@ -479,10 +479,17 @@
   }
 
   .product-card {
-    max-width: 400px;
-    max-height: 50vh;
-    padding-bottom: 20%;
-    margin-bottom: 0px;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto 25px;
+
+    padding: 22px 18px 26px;
+    height: auto;              /* important */
+    max-height: none;          /* remove restriction */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .products-section {
