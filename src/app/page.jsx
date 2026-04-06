@@ -7,14 +7,14 @@
 
 // ── Page-level SEO metadata (overrides layout defaults for this page) ──
 export const metadata = {
-  title: "Go-Grab | Smart Vending Machine Company in India",
+  title: "Go-Grab | Vending Machine Company in India",
   description:
     "Go-Grab installs smart, cashless vending machines across campuses, offices & malls in India. 24/7 automated snacking with zero hassle. Get a machine today!",
   alternates: {
     canonical: "https://www.go-grab.in",
   },
   openGraph: {
-    title: "Go-Grab | Smart Vending Machine Company in India",
+    title: "Go-Grab | Vending Machine Company in India",
     description:
       "India's smartest vending machine company. Cashless, 24/7, automated. Install a Go-Grab vending machine at your campus or office.",
     url: "https://www.go-grab.in",
