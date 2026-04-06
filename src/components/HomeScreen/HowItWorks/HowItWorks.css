@@ -1,0 +1,97 @@
+/* src/components/HomeScreen/HowItWorks/HowItWorks.css */
+/* ── Two additions:
+   1. ol/li reset — <ol> replaces <div class="steps"> so we
+      remove default list styling (bullets, padding, margin)
+   2. .step-label resets <h3> to look like your original <p>
+   Everything else identical to your original.
+── */
+
+/* Reset <ol> default browser styles */
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Reset <li> */
+.step {
+  flex: 1;
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* Reset <h3> step label to match original <p> exactly */
+.step-label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0F78E4;
+  font-weight: 500;
+  /* Remove h3 default top margin */
+  margin-top: 0;
+}
+
+.how-it-works {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.how-it-works .subtitle {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+/* next/image renders <img> so .imgStep selector still works */
+.imgStep {
+  justify-self: center;
+  width: 250px !important;
+  height: 250px !important;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  transition: box-shadow 0.3s ease;
+}
+
+.imgStep:hover {
+  box-shadow: 0 10px 20px rgba(15, 120, 228, 0.2);
+}
+
+.step .description {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    margin-bottom: 30px;
+  }
+
+  .imgStep {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .how-it-works h2 {
+    margin-top: 8vh;
+  }
+
+  .how-it-works {
+    padding-top: 0px;
+  }
+}

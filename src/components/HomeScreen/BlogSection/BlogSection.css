@@ -1,0 +1,164 @@
+/* src/components/HomeScreen/BlogSection/BlogSection.css */
+/* ── No visual changes from your original ── */
+/* ── One addition: reset <a> styles so blog-card link looks like a div ── */
+
+/* Reset link styles on the card — since the whole card is now a <Link> */
+a.blog-card {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+a.view-more-button {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.blog-section {
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  max-height: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 180px !important;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0px 15px 10px;
+  color: #333;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.blog-description {
+  font-size: 1em;
+  color: #666;
+  margin: 0 15px 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  display: block;
+  line-height: 1.5em;
+  max-height: 4.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.read-more-button {
+  color: #007bff;
+  display: flex;
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+.view-more-button {
+  background-color: transparent;
+  color: black;
+  border: 2px #878787 solid;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 1.2em !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    -webkit-line-clamp: unset !important;
+    margin-top: 5px;
+  }
+
+  .blog-image {
+    height: 200px !important;
+  }
+
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section h2 {
+    font-size: 2em;
+  }
+
+  .blog-description {
+    font-size: 0.95em;
+    max-height: 4.5em;
+    line-height: 1.5em;
+  }
+
+  .blog-title {
+    text-overflow: ellipsis;
+  }
+}

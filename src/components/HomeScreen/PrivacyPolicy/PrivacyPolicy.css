@@ -1,0 +1,89 @@
+/* src/components/HomeScreen/PrivacyPolicy/PrivacyPolicy.css */
+/* ── Replaces all inline styles from the original component.  ──
+   The original JS styles object had two things that silently
+   broke in React:
+   1. ':hover' on a link — inline styles can't do pseudo-classes
+   2. '@media' queries — inline styles don't support breakpoints
+   Both now work correctly as real CSS.
+── */
+
+.pp-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Manrope', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .pp-content {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .pp-heading {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .pp-subheading {
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .pp-paragraph {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #495057;
+    line-height: 1.6;
+  }
+  
+  .pp-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+  }
+  
+  .pp-list-item {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #495057;
+  }
+  
+  /* ── Link styles — hover now actually works ── */
+  .pp-link {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .pp-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* ── Responsive — media queries now actually work ── */
+  @media (max-width: 768px) {
+    .pp-content {
+      padding: 20px;
+    }
+  
+    .pp-heading {
+      font-size: 1.6rem;
+    }
+  
+    .pp-subheading {
+      font-size: 1.2rem;
+    }
+  }

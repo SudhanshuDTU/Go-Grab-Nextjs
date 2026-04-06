@@ -1,0 +1,185 @@
+/* src/components/HomeScreen/WhyGoGrab/WhyGoGrab.css */
+/* ── Two additions:
+   1. .video-heading styles the "Smart Vending, Effortlessly" p tag
+      (moved out of inline style into CSS)
+   2. h2.subtitle and h3.pHeading resets match original <p> look
+   Everything else identical to your original.
+── */
+
+.why-go-grab {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+/* h2 replaces original <p class="subtitle"> */
+.why-go-grab h2.subtitle {
+  font-size: 32px;
+  color: #0F78E4;
+  font-weight: 700;
+  margin-bottom: 40px;
+  /* Remove default h2 top margin */
+  margin-top: 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.feature:hover {
+  box-shadow: 0 10px 20px rgba(15, 120, 228, 0.2);
+}
+
+.feature:nth-child(1),
+.feature:nth-child(2),
+.feature:nth-child(3) {
+  background-color: #FFF8EA;
+}
+
+/* next/image renders <img> — target via class on parent */
+.feature img {
+  margin: 0 auto 20px auto; 
+  width: 170px !important;
+  height: 170px !important;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* h3 replaces original <p class="pHeading"> — reset to match */
+.feature h3.pHeading {
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #0F78E4;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.feature .description {
+  font-size: 15px;
+  color: #646464;
+  margin: 0;
+}
+
+/* "Smart Vending, Effortlessly" heading */
+.video-heading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.video-heading p {
+  font-size: 32px;
+  color: #0F78E4;
+  font-weight: 700;
+  margin: 0;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+.video-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.video-container video {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.video-description {
+  flex: 1;
+  text-align: left;
+  margin-bottom: auto;
+}
+
+.video-description p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.partner-button3 {
+  display: block;
+  margin-top: 50px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.partner-button3:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .video-container video {
+    width: 60%;
+    border-radius: 10px;
+  }
+
+  .feature {
+    margin-bottom: 20px;
+  }
+
+  .video-section {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 8px;
+  }
+
+  .video-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .partner-button3 {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .video-description {
+    flex: 1;
+    text-align: left;
+  }
+
+  .video-description p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+}

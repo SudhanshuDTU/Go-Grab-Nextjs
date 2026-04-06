@@ -1,0 +1,271 @@
+/* src/styles/App.css */
+/* ── One change from original: .App-header is already sticky ──
+   Added: top: 0, z-index: 1000, and a subtle box-shadow so
+   content scrolling under it looks clean.
+── */
+
+.App {
+  text-align: center;
+}
+
+.body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* ── STICKY NAVBAR ── */
+.App-header {
+  background-color: #EAECF0;
+  padding: 10px 20px;
+  color: black;
+  position: sticky;          /* stays at top while scrolling */
+  top: 0;
+  z-index: 1000;             /* sits above all page content */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);  /* subtle shadow when content scrolls under */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 12px;
+}
+
+.logo img {
+  height: 30px;
+  display: block;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.partner-button {
+  display: flex;
+  align-items: center;
+}
+
+.partner-button .button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.partner-button .button:hover {
+  background-color: #0056b3;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  border: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+}
+
+.close-button {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 6px 0;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .logo {
+    margin-left: 0px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-container.active {
+    display: flex;
+    padding: 10px 0 20px;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .partner-button {
+    margin-top: 8px;
+    padding: 0 20px;
+    width: 80%;
+  }
+
+  .partner-button .button {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: -20px;
+  }
+}

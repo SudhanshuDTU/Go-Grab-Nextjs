@@ -1,0 +1,96 @@
+/* src/components/HomeScreen/CampusFeedback/CampusFeedback.css */
+/* ── One addition: reset <blockquote> default browser styles ── */
+/* ── Everything else identical to your original ── */
+
+/* Reset blockquote — browsers add margin and sometimes a border by default */
+.feedback-text {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.feedback-text p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-style: italic;
+  margin: 0 0 20px 0;
+}
+
+.campus-feedback {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.campus-feedback h2 {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.campus-feedback .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.feedback-cards {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 80px auto 80px;
+  flex-wrap: wrap;
+}
+
+.feedback-card {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.feedback-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-info {
+  text-align: center;
+}
+
+.author-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.author-designation {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .feedback-cards {
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .campus-feedback {
+    padding-top: 0px;
+  }
+
+  .feedback-card {
+    width: 100%;
+    max-width: 300px;
+    background: transparent;
+  }
+}

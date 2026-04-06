@@ -1,0 +1,89 @@
+/* src/components/HomeScreen/FAQSection/FAQSection.css */
+/* ── Two additions:
+   1. .faq-question-text resets h3 to look like your original <p>
+   2. .faq-answer transition styles moved to inline for JS control
+   Everything else identical to your original.
+── */
+
+.faq-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.faq-section h2 {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.faq-item {
+  background-color: #F8F4EA;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Reset h3 to look identical to your original <p> */
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 400;       /* match original <p> weight */
+  margin: 0;
+  text-align: left;
+  color: inherit;
+  line-height: 1.5;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #007bff;
+  flex-shrink: 0;         /* prevent button squishing on long questions */
+  margin-left: 12px;
+}
+
+/* faq-answer padding/maxHeight controlled inline for transition */
+.faq-answer {
+  background-color: #f8f9fa;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  text-align: left;
+}
+
+.view-more-button {
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  border: 2px #878787 solid;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #218838;
+  color: white;
+}

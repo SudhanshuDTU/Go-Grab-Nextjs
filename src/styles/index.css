@@ -1,0 +1,83 @@
+/* src/styles/index.css */
+
+/* Reset all margins and paddings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* HTML and Body base styles */
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Remove default list styles */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove default link underline */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Better image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Button reset */
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Form element resets */
+  input,
+  textarea,
+  select,
+  button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  /* Focus styles for accessibility */
+  :focus-visible {
+    outline: 2px solid #0F78E4;
+    outline-offset: 2px;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    background-color: #0F78E4;
+    color: white;
+  }
+  
+  /* Scrollbar styling (optional, for better UX) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0F78E4;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0c5fb3;
+  }

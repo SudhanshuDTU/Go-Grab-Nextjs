@@ -1,0 +1,67 @@
+/* src/components/HomeScreen/TrustedByUsers/TrustedByUsers.css */
+/* ── Identical to your original — no changes needed ── */
+
+.trusted-by-users {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #FFF1CC;
+}
+
+.trusted-by-users h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.trusted-by-users .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat {
+  flex: 1;
+  padding: 20px;
+}
+
+/* <strong> inside stat-number resets to match original look */
+.stat-number strong {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.stat-number {
+  margin: 0 0 8px 0;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 20px;
+  }
+}

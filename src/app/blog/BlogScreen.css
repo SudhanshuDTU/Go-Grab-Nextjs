@@ -1,0 +1,399 @@
+/* src/app/blog/BlogScreen.css */
+
+.blog-screen {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  color: #666;
+  padding: 0 10px;        /* stops text from running edge-to-edge */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Hero section ── */
+.contact-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFBED;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+}
+
+.contact-header {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.contact-header h1 {
+  font-size: 3.5em;
+  text-align: left;
+  padding-left: 20px;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 769px) {
+  .contact-header {
+    padding-left: 40px;
+  }
+}
+
+.contact-header p {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: medium;
+  color: #555;
+  line-height: 1.6;
+}
+
+.highlight-text {
+  color: #007bff;
+}
+
+.contact-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image {
+  max-width: 80% !important;
+  height: auto !important;
+  border-radius: 8px;
+}
+
+/* ── Blog cards ── */
+.blog-section {
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+a.blog-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  max-height: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 180px !important;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0px 15px 10px;
+  color: #333;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.blog-description {
+  font-size: 1em;
+  color: #666;
+  margin: 0 15px 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  display: block;
+  line-height: 1.5em;
+  max-height: 4.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.read-more-footer {
+  margin-top: auto;
+}
+
+.read-more-button {
+  color: #007bff;
+  display: flex;
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+/* ── Pagination ── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pagination-arrow,
+.pagination-number {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-arrow:hover:not(:disabled),
+.pagination-number:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+.pagination-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-number.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-ellipsis {
+  padding: 8px 5px;
+}
+
+/* ── Loading / error ── */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-container button {
+  padding: 8px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* ════════════════════════════════════════
+   TABLET  ≤ 768px
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Stack hero vertically, center everything */
+  .contact-hero-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+  }
+
+  .contact-header {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Key fix — was 3.5em which is ~56px on mobile, far too large */
+  .contact-header h1 {
+    font-size: 2rem;
+    padding-left: 0;
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .contact-header p {
+    padding-left: 0;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .contact-image-container {
+    width: 100%;
+  }
+
+  .contact-image {
+    max-width: 65% !important;
+  }
+
+  /* Blog header */
+  .blog-header {
+    margin-bottom: 24px;
+    padding: 0 12px;
+  }
+
+  .blog-header h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Shorter subtitle on mobile — avoids the orphan word */
+  .blog-header p {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  /* Cards */
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-title {
+    font-size: 1.2em !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    -webkit-line-clamp: unset !important;
+    margin-top: 5px;
+  }
+
+  .blog-image {
+    height: 200px !important;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/* ════════════════════════════════════════
+   SMALL MOBILE  ≤ 480px
+════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  .contact-hero-section {
+    padding: 24px 16px;
+  }
+
+  /* Comfortable reading size on small phones */
+  .contact-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .contact-header p {
+    font-size: 0.88rem;
+  }
+
+  .contact-image {
+    max-width: 75% !important;
+  }
+
+  .blog-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-description {
+    font-size: 0.9em;
+  }
+}
+
+/* ════════════════════════════════════════
+   VERY SMALL  ≤ 360px  (older Androids)
+════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+  .contact-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .contact-header p {
+    font-size: 0.82rem;
+  }
+
+  .contact-image {
+    max-width: 85% !important;
+  }
+}

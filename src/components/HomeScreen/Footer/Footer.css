@@ -1,0 +1,160 @@
+/* src/components/HomeScreen/Footer/Footer.css */
+/* ── No changes from your original — fully compatible with Next.js ── */
+
+.footer {
+  background-color: #2054A1;
+  padding: 100px 20px 0px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #007bff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section p {
+  text-align: left;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  color: #666;
+}
+
+.footer-bottom div {
+  font-weight: 400;
+  font-size: 11px;
+  color: #666;
+}
+
+.social-icons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icons a {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+}
+
+.footerlogo {
+  height: 85px !important;
+  width: 149px !important;
+  filter: brightness(0) invert(1);
+  margin-top: 25px;
+  /* Next.js Image needs explicit dimensions via style or className */
+  object-fit: contain;
+}
+
+.social-icons img {
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+
+  .footer-section h3 {
+    text-align: left;
+    justify-self: flex-start;
+    margin-top: 10px;
+  }
+
+  .centerINMob {
+    justify-self: left;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-icons a {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+  }
+
+  .social-icons img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer-section .footer-blogs {
+    justify-self: center;
+  }
+
+  .footer-blogs {
+    justify-self: center;
+  }
+
+  .blogINMob {
+    text-align: center;
+  }
+
+  .footerlogo {
+    margin-top: 20px;
+  }
+}
