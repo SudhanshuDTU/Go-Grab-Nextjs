@@ -49,7 +49,9 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select {
   z-index: 1000;             /* sits above all page content */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);  /* subtle shadow when content scrolls under */
 }
-
+html, body {
+  overflow-x: visible !important;
+}
 .navbar {
   display: flex;
   justify-content: space-between;

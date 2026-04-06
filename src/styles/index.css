@@ -14,7 +14,7 @@
     margin: 0;
     width: 100%;
     overflow-x: hidden;
-    position: relative;
+    /* position: relative; */
   }
   
   /* Remove default list styles */

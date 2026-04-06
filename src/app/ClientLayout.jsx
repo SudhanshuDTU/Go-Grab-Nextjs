@@ -16,6 +16,7 @@ import { trackPageView, trackEvent } from '@/utils/googleAnalytics';
 import { ModalProvider } from '@/context/ModalContext';
 import Footer from '@/components/HomeScreen/Footer/Footer';
 import navLogo from '@/assets/navLogo.png';
+import '@/styles/App.css'
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
@@ -193,8 +194,12 @@ export default function ClientLayout({ children }) {
             </div>
           </div>
 
-          {/* MODAL */}
-          {isModalOpen && (
+         
+        </nav>
+        <ToastContainer />
+      </header>
+       {/* MODAL */}
+       {isModalOpen && (
             <div style={s.overlay}>
               <div style={s.modal}>
                 <button onClick={closeModal} style={s.closeBtn}>✕</button>
@@ -252,9 +257,6 @@ export default function ClientLayout({ children }) {
               </div>
             </div>
           )}
-        </nav>
-        <ToastContainer />
-      </header>
 
       {/* PAGE CONTENT */}
       <main>{children}</main>
