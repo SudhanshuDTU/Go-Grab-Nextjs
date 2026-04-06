@@ -12,7 +12,7 @@
 
 import Image from 'next/image';
 import './HeroSection.css';
-import heroImage from '@/assets/Hero_Section_Image.png';
+import heroImage from '@/assets/Hero_Section_Image.webp';
 
 const HeroSection = ({ openModal }) => {
   return (
@@ -56,9 +56,10 @@ const HeroSection = ({ openModal }) => {
         */}
         <Image
           src={heroImage}
-          alt="Smart Vending Machine by Go-Grab — cashless snack vending for offices and campuses in India"
+          alt="Vending Machine by Go-Grab — cashless snack vending for offices and campuses in India"
           title="Smart Snack and Chocolate Vending Machine for Offices & Campuses"
           priority
+          fetchPriority="high"
           sizes="(max-width: 768px) 100vw, 50vw"
           style={{
             marginTop: '100px',
