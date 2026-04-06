@@ -127,7 +127,7 @@ export default async function BlogSection() {
 
       {/* View all blogs */}
       <Link href="/blog" className="view-more-button" aria-label="Read more about cashless vending machines in educational institutions">
-        Read More
+        Read More <span className="sr-only">about cashless vending machines</span>
       </Link>
     </section>
   );
