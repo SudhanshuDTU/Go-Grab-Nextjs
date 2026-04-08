@@ -136,9 +136,9 @@ export default function ProductsScreen({ openModal }) {
           />
         </div>
 
-        {/* <button className="hero-btn mb-bt" onClick={openModal}>
+        <button className="hero-btn mb-bt" onClick={openModal}>
           Collaborate With Us
-        </button> */}
+        </button>
       </div>
 
       {/* ── Section 2: Products ── */}

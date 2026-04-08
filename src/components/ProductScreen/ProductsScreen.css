@@ -45,7 +45,9 @@
 }
 
 .hero-btn {
+ 
   background-color: #6BC115;
+  font-weight: 600;
   border: none;
   color: white;
   padding: 10px 15px;
@@ -321,6 +323,7 @@
     top: -10%;
     left: -10%;
   }
+ 
 }
 
 @media (max-width: 1024px) {
@@ -329,7 +332,7 @@
     gap: 25px;
     max-width: 900px;
   }
-  
+ 
   .brand-logo {
     height: 90px;
     padding: 12px;
@@ -616,4 +619,23 @@
 
 .brand-item:hover {
   transform: scale(1.05);
+}
+.mb-bt {
+  display: none;
+}
+
+/* mobile view */
+@media (max-width: 900px) {
+  .lp-bt {
+    display: none !important;
+  }
+
+  .mb-bt {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-btn.lp-bt {
+    margin-top: 60px;
+  }
 }
