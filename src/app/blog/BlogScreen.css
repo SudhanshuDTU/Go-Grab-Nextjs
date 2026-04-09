@@ -148,6 +148,12 @@ a.blog-card {
   align-items: center;
   overflow: hidden;
   line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     /* allow 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  min-height: 3.9em;   
 }
 
 .blog-description {
