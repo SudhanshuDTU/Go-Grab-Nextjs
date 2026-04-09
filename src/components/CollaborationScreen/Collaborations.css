@@ -2,14 +2,17 @@
 /* ── No visual changes from your original ── */
 /* ── next/image renders an <img> so all img selectors still work ── */
 
-/* Overall section layout */
+/* Overall section layout — matches products hero exactly */
 .collab-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 50px;
+  padding: 0px 50px 40px;
   gap: 40px;
   flex-wrap: wrap;
+  background-color: #F4F1E7;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 /* Left side text */
@@ -41,7 +44,7 @@
   font-weight: 600;
 }
 
-/* Button */
+/* Button — matches .hero-btn in products */
 .collab-btn {
   background-color: #6BC115;
   border: none;
@@ -49,6 +52,7 @@
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 1.1rem;
+  font-weight: 600;            /* matches products hero button */
   cursor: pointer;
   transition: 0.3s ease-in-out;
   display: flex;
@@ -62,19 +66,19 @@
   background-color: #7cb342;
 }
 
-/* Right side image */
+/* Right side image — matches .hero-image-container in products */
 .collab-image-container {
   flex: 1;
   text-align: center;
   min-width: 320px;
 }
 
-/* next/image wraps in a span — target the img inside */
+/* matches .hero-img in products */
 .collab-img {
-  width: 100% !important;
-  max-width: 600px !important;
+  width: 110% !important;
+  max-width: 700px !important;
   height: auto !important;
-  padding-left: 60px;
+  padding-left: 0;
   display: block;
   margin: 0 auto;
 }
@@ -100,13 +104,11 @@
 }
 
 .benefit-card {
-  
   max-width: 480px;
   text-align: left;
 }
 
 .benefit-img {
-  margin: auto;
   width: 100% !important;
   max-width: 260px !important;
   height: auto !important;
@@ -231,11 +233,15 @@
   .collab-section {
     flex-direction: column;
     text-align: center;
-    padding: 40px 5%;
+    padding: 40px 5% 40px;   /* consistent top/bottom padding on mobile */
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
   }
 
   .collab-img {
     padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 500px !important;  /* generous size on mobile */
   }
 
   .collab-title {
@@ -352,7 +358,7 @@
   }
 
   .collab-img {
-    max-width: 350px !important;
+    max-width: 450px !important;
   }
 
   .benefit-img {

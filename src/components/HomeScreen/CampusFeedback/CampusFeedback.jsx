@@ -1,17 +1,8 @@
 // src/components/HomeScreen/CampusFeedback/CampusFeedback.jsx
-// ─────────────────────────────────────────────────────────────
-//  SERVER COMPONENT — no interactivity, pure display.
-//  No "use client" needed → fully SSR'd → Google reads all
-//  testimonial text directly from HTML.
-//
-//  SEO addition: Review structured data (JSON-LD) so Google
-//  can show star ratings / testimonials in rich results.
-// ─────────────────────────────────────────────────────────────
+// SERVER COMPONENT — pure display, no interactivity needed.
 
 import './CampusFeedback.css';
 
-// ── Testimonials data ──
-// Easy to add more — just push to this array.
 const TESTIMONIALS = [
   {
     text: "Go-Grab's 24/7 vending is a game-changer for my study nights. Love the variety and ease!",
@@ -30,19 +21,12 @@ const TESTIMONIALS = [
   },
 ];
 
-// ── Review structured data ──
-// Google can show these as rich results in search —
-// "4.9 ★ — Go-Grab Smart Vending Machines" under your listing.
 const reviewSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Go-Grab Smart Vending Machine',
-  description:
-    'Cashless, 24/7 smart vending machines for campuses, offices, and public spaces across India.',
-  brand: {
-    '@type': 'Brand',
-    name: 'Go-Grab',
-  },
+  name: 'Go-Grab Vending Machine',
+  description: 'Cashless, 24/7 vending machines for campuses, offices, and public spaces across India.',
+  brand: { '@type': 'Brand', name: 'Go-Grab' },
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -53,48 +37,45 @@ const reviewSchema = {
   review: TESTIMONIALS.map(({ text, name, designation }) => ({
     '@type': 'Review',
     reviewBody: text,
-    author: {
-      '@type': 'Person',
-      name: `${name}, ${designation}`,
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
+    author: { '@type': 'Person', name: `${name}, ${designation}` },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
   })),
 };
 
 export default function CampusFeedback() {
   return (
     <section className="campus-feedback" aria-label="Customer testimonials for Go-Grab vending machines">
-
-      {/* Review structured data — Google reads this for rich results */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
 
-      <h2>What People Say</h2>
+      <h2 className="cf-heading">What People Say</h2>
+      <p className="cf-subtitle">
+        Trusted by students, professionals, and institutions across India
+      </p>
 
-      <div className="feedback-cards">
+      <div className="cf-cards">
         {TESTIMONIALS.map(({ text, name, designation }) => (
-          <article className="feedback-card" key={name}>
-            {/*
-              <blockquote> is the semantic HTML for testimonials.
-              Google understands this is a user review/quote.
-            */}
-            <blockquote className="feedback-text">
-              <p>"{text}"</p>
+          <article className="cf-card" key={name}>
+            {/* Decorative large quote mark */}
+            <span className="cf-quote-mark" aria-hidden="true">"</span>
+
+            <blockquote className="cf-text">
+              <p>{text}</p>
             </blockquote>
 
-            <div className="feedback-author">
-              <div
-                className="author-info"
-                style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}
-              >
-                <p className="author-name">{name},&nbsp;</p>
-                <p className="author-designation">{designation}</p>
+            {/* Blue accent divider */}
+            <div className="cf-divider" />
+
+            <div className="cf-author">
+              {/* Avatar circle with first letter of name */}
+              <div className="cf-avatar" aria-hidden="true">
+                {name.charAt(0)}
+              </div>
+              <div className="cf-author-info">
+                <p className="cf-name">{name}</p>
+                <p className="cf-role">{designation}</p>
               </div>
             </div>
           </article>

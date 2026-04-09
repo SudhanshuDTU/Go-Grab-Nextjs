@@ -116,7 +116,7 @@ const Footer = ({ openModal }) => {
 
       {/* ── Bottom bar ── */}
       <div className="footer-bottom">
-        <p style={{ color: 'white' }}>© 2025 Go-Grab, All rights reserved.</p>
+        <p style={{ color: 'white' }}>© 2026 Go-Grab, All rights reserved.</p>
         <div className="centerINMob">
           <Link
             href="/privacy-policy"

@@ -1,96 +1,185 @@
 /* src/components/HomeScreen/CampusFeedback/CampusFeedback.css */
-/* ── One addition: reset <blockquote> default browser styles ── */
-/* ── Everything else identical to your original ── */
 
-/* Reset blockquote — browsers add margin and sometimes a border by default */
-.feedback-text {
+.campus-feedback {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Heading */
+.cf-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0F78E4;
+  margin: 0 0 10px;
+}
+
+/* Subtitle */
+.cf-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin: 0 0 48px;
+  line-height: 1.5;
+}
+
+/* ── Cards grid ── */
+.cf-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Individual card ── */
+.cf-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px 24px;
+  border: 1px solid #e8edf3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  text-align: left;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cf-card:hover {
+  box-shadow: 0 8px 24px rgba(13, 102, 211, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Large decorative quote mark */
+.cf-quote-mark {
+  font-size: 72px;
+  line-height: 1;
+  color: #0D66D3;
+  opacity: 0.12;
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 12px;
+  left: 22px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Review text */
+.cf-text {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.feedback-text p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 20px;
+.cf-text p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.75;
   font-style: italic;
-  margin: 0 0 20px 0;
+  margin: 16px 0 0;  /* pushes text below the quote mark */
 }
 
-.campus-feedback {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f8f9fa;
+/* Blue accent divider */
+.cf-divider {
+  width: 40px;
+  height: 2px;
+  background-color: #0D66D3;
+  border-radius: 2px;
+  opacity: 0.35;
 }
 
-.campus-feedback h2 {
-  font-size: 36px;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-
-.campus-feedback .subtitle {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.feedback-cards {
+/* Author row */
+.cf-author {
   display: flex;
-  background-color: transparent;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 80px auto 80px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 
-.feedback-card {
-  background-color: transparent;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-}
-
-.feedback-author {
+/* Avatar circle */
+.cf-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #E6F1FB;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.author-info {
-  text-align: center;
-}
-
-.author-name {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  margin-right: 5px;
+  font-weight: 600;
+  color: #185FA5;
+  flex-shrink: 0;
 }
 
-.author-designation {
-  font-size: 16px;
-  color: #666;
+.cf-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-@media (max-width: 768px) {
-  .feedback-cards {
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+.cf-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cf-role {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════
+   TABLET  ≤ 900px — 2 columns
+════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .cf-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
   }
 
+  /* Make the third card span full width and center */
+  .cf-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
+/* ════════════════════════════════════════
+   MOBILE  ≤ 600px — 1 column
+════════════════════════════════════════ */
+@media (max-width: 600px) {
   .campus-feedback {
-    padding-top: 0px;
+    padding: 50px 16px;
   }
 
-  .feedback-card {
-    width: 100%;
-    max-width: 300px;
-    background: transparent;
+  .cf-heading {
+    font-size: 1.6rem;
+  }
+
+  .cf-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .cf-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 16px;
+  }
+
+  .cf-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .cf-card {
+    padding: 28px 22px 22px;
+  }
+
+  .cf-text p {
+    font-size: 14px;
   }
 }
